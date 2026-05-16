@@ -9,15 +9,15 @@
   </head>
 
   <body>
-    <header class="page-header">
-      <a href="index.html" class="logo">
+    <header class="page-header" data-test="header">
+      <a href="index.html" class="logo" aria-current="page">
         <img src="#" alt="Логотип Sedona" class="logo__img">
       </a>
 
       <nav class="navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a class="navigation__link navigation__link_active">Главная</a>
+            <a class="navigation__link navigation__link_active" aria-current="page">Главная</a>
           </li>
           <li class="navigation__item">
             <a href="#" class="page-navigation__link">О Седоне</a>
@@ -35,25 +35,23 @@
           </li>
           <li class="navigation__button">
             <a href="#" class="navigation__icon icon icon_favourites">
-              <span class="visually-hidden">Избранное</span>
-              <span class="icon_favourites-number">99</span>
+              <span class="visually-hidden">Отелей в избранном</span>
+              <span class="icon_favourites-count">99</span>
             </a>
           </li>
         </ul>
 
-        <a href="#" class="navigation__button button">Хочу сюда</a>
+        <a href="#" class="navigation__button button">Хочу сюда!</a>
       </nav>
     </header>
 
-    <main class="page-main">
-      <h1 class="visually-hidden">Городок Седона</h1>
-
-      <section class="hero">
-        <h2 class="hero__title title visually-hidden">Добро пожаловать в Седону</h2>
+    <main class="page-main" data-test="main">
+      <section class="hero" data-test="hero">
+        <h1 class="visually-hidden">Сайт города Седона</h1>
         <img src="#" alt="Welcome to the gorgeous Sedona. 'Because the Grand Canyon sucks!'" class="hero__img">
       </section>
 
-      <section class="advantages">
+      <section class="advantages" data-test="advantages">
         <h2 class="advantages__title title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="advantages__desc desc">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
 
@@ -89,38 +87,39 @@
 
         <ul class="services__list">
           <li class="services__item">
-            <h3 class="services__subtitle subtitle">Жильё</h2>
+            <h3 class="services__subtitle subtitle">Жильё</h3>
             <p class="services__subdesc subdesc">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
           <li class="services__item">
-            <h3 class="services__subtitle subtitle">Еда</h2>
+            <h3 class="services__subtitle subtitle">Еда</h3>
             <p class="services__subdesc subdesc">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="services__item">
-            <h3 class="services__subtitle subtitle">Сувениры</h2>
+            <h3 class="services__subtitle subtitle">Сувениры</h3>
             <p class="services__subdesc subdesc">Не только китайского, но и настоящего местного производства!</p>
           </li>
         </ul>
       </section>
 
-      <section class="hotel-search">
+      <section class="hotel-search" data-test="search">
         <h2 class="hotel-search__title title">Заинтересовались?</h2>
         <p class="hotel-search__desc desc">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button class="hotel-search__button button" type="button">Поиск гостиницы в Седоне</button>
       </section>
     </main>
 
-    <section class="subscribe">
+    <section class="subscribe" data-test="subscribe">
       <h2 class="subscribe__title title">Подпишитесь на рассылку</h2>
       <p class="subscribe__desc desc">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
       <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
-        <input class="subscribe__input" type="email" name="email" placeholder="Ваш e-mail" required>
+        <label class="visually-hidden" for="subscribe-email">Укажите ваш e-mail</label>
+        <input class="subscribe__input" id="subscribe-email" type="email" name="email" placeholder="Ваш e-mail" required>
         <button class="subscribe__button button" type="submit">Подписаться</button>
       </form>
     </section>
 
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <section class="socials">
         <h2 class="visually-hidden">Наши социальные сети</h2>
 

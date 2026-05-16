@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <header class="page-header">
+    <header class="page-header" data-test="header">
       <a href="index.html" class="logo">
         <img src="#" alt="Логотип Sedona" class="logo__img">
       </a>
@@ -23,7 +23,7 @@
             <a href="#" class="page-navigation__link">О Седоне</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link navigation__link_active">Гостиницы</a>
+            <a class="navigation__link navigation__link_active" aria-current="page">Гостиницы</a>
           </li>
         </ul>
 
@@ -35,18 +35,18 @@
           </li>
           <li class="navigation__button">
             <a href="#" class="navigation__icon icon icon_favourites">
-              <span class="visually-hidden">Избранное</span>
-              <span class="icon_favourites-number">99</span>
+              <span class="visually-hidden">Отелей в избранном</span>
+              <span class="icon_favourites-count">99</span>
             </a>
           </li>
         </ul>
 
-        <a href="#" class="navigation__button button">Хочу сюда</a>
+        <a href="#" class="navigation__button button">Хочу сюда!</a>
       </nav>
     </header>
 
-    <main class="page-main">
-      <section class="filter">
+    <main class="page-main" data-test="main">
+      <section class="filter" data-test="filter">
         <h1 class="filter__title">Гостиницы Седоны</h1>
 
         <ul class="breadcrumbs">
@@ -67,28 +67,32 @@
 
           <fieldset class="filter__fieldset">
             <legend class="filter__subtitle">Инфраструктура:</legend>
-            <label class="filter__line">
-              <input type="checkbox" name="pool" checked>Бассейн
-            </label>
-            <label class="filter__line">
-              <input type="checkbox" name="parking" checked>Парковка
-            </label>
-            <label class="filter__line">
-              <input type="checkbox" name="wifi">Wi-Fi
-            </label>
+            <ul class="filter__fieldset-list">
+              <li class="filter__fieldset-item">
+                <input type="checkbox" name="pool" checked>Бассейн
+              </li>
+              <li class="filter__fieldset-item">
+                <input type="checkbox" name="parking" checked>Парковка
+              </li>
+              <li class="filter__fieldset-item">
+                <input type="checkbox" name="wifi">Wi-Fi
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="filter__fieldset">
             <legend class="filter__subtitle">Тип жилья:</legend>
-            <label class="filter__line">
-              <input type="radio" name="property-type" value="hotel" checked>Гостиница
-            </label>
-            <label class="filter__line">
-              <input type="radio" name="property-type" value="motel">Мотель
-            </label>
-            <label class="filter__line">
-              <input type="radio" name="property-type" value="apartments">Апартаменты
-            </label>
+            <ul class="filter__fieldset-list">
+              <li class="filter__fieldset-item">
+                <input type="radio" name="property-type" value="hotel" checked>Гостиница
+              </li>
+              <li class="filter__fieldset-item">
+                <input type="radio" name="property-type" value="motel">Мотель
+              </li>
+              <li class="filter__fieldset-item">
+                <input type="radio" name="property-type" value="apartments">Апартаменты
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="filter__fieldset">
@@ -111,13 +115,13 @@
           </fieldset>
 
           <fieldset class="filter__fieldset">
-            <button type="button" class="filter__button button">Применить</button>
+            <button type="submit" class="filter__button button">Применить</button>
             <button type="reset" class="filter__button filter__button_reset button">Сбросить</button>
           </fieldset>
         </form>
       </section>
 
-      <section class="result">
+      <section class="result" data-test="catalog">
         <header class="result__header">
           <h2 class="result__title title">
             Найдено гостиниц <span class="result__num">38</span>
@@ -133,17 +137,17 @@
             <li class="filter__view-item">
               <a href="catalog.html?view=tile" class="filter__view-link filter__view-link_grid">
                 <span class="visually-hidden">Плиткой</span>
-              </button>
+              </a>
             </li>
             <li class="filter__view-item">
               <a href="catalog.html?view=card" class="filter__view-link filter__view-link_full">
                 <span class="visually-hidden">На весь экран</span>
-              </button>
+              </a>
             </li>
             <li class="filter__view-item">
               <a href="catalog.html?view=list" class="filter__view-link filter__view-link_list">
                 <span class="visually-hidden">Списком</span>
-              </button>
+              </a>
             </li>
           </ul>
         </header>
@@ -160,8 +164,10 @@
             </p>
             <a href="#" class="button card__more">Подробнее</a>
             <button class="button button_favorites card__button" type="button">В избранное</button>
-            <span class="card__status" aria-label="Четыре звезды"></span>
-            <span class="button button_rating card__button" type="button">Рейтинг: 8,5</span>
+            <p class="card__status">
+              <span class="visually-hidden">Четыре звезды</span>
+            </p>
+            <span class="button button_rating card__button">Рейтинг: 8,5</span>
           </li>
 
           <li class="result__item card">
@@ -175,8 +181,10 @@
             </p>
             <a href="#" class="button card__more">Подробнее</a>
             <button class="button button_in-favorites card__button" type="button">В избранном</button>
-            <span class="card__status" aria-label="Четыре звезды"></span>
-            <span class="button button_rating card__button" type="button">Рейтинг: 9,2</span>
+            <p class="card__status">
+              <span class="visually-hidden">Четыре звезды</span>
+            </p>
+            <span class="button button_rating card__button">Рейтинг: 9,2</span>
           </li>
 
           <li class="result__item card">
@@ -190,8 +198,10 @@
             </p>
             <a href="#" class="button card__more">Подробнее</a>
             <button class="button button_favorites card__button" type="button">В избранное</button>
-            <span class="card__status" aria-label="Три звезды"></span>
-            <span class="button button_rating card__button" type="button">Рейтинг: 6,9</span>
+            <p class="card__status">
+              <span class="visually-hidden">Три звезды</span>
+            </p>
+            <span class="button button_rating card__button">Рейтинг: 6,9</span>
           </li>
 
           <li class="result__item card">
@@ -205,8 +215,10 @@
             </p>
             <a href="#" class="button card__more">Подробнее</a>
             <button class="button button_favorites card__button" type="button">В избранное</button>
-            <span class="card__status" aria-label="Две звезды"></span>
-            <span class="button button_rating card__button" type="button">Рейтинг: 5,0</span>
+            <p class="card__status">
+              <span class="visually-hidden">Две звезды</span>
+            </p>
+            <span class="button button_rating card__button">Рейтинг: 5,0</span>
           </li>
         </ul>
 
@@ -224,7 +236,7 @@
             <a href="" class="result__pagination-link">4</a>
           </li>
           <li class="result__pagination-item result__pagination-item_dotted">
-            ...
+            <span class="result__pagination-link">...</span>
           </li>
           <li class="result__pagination-item">
             <a href="" class="result__pagination-link">10</a>
@@ -233,17 +245,18 @@
       </section>
     </main>
 
-    <section class="subscribe">
+    <section class="subscribe" data-test="subscribe">
       <h2 class="subscribe__title title">Подпишитесь на рассылку</h2>
       <p class="subscribe__desc desc">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
       <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
-        <input class="subscribe__input" type="email" name="email" placeholder="Ваш e-mail" required>
+        <label class="visually-hidden" for="subscribe-email">Укажите ваш e-mail</label>
+        <input class="subscribe__input" id="subscribe-email" type="email" name="email" placeholder="Ваш e-mail" required>
         <button class="subscribe__button button" type="submit">Подписаться</button>
       </form>
     </section>
 
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <section class="socials">
         <h2 class="visually-hidden">Наши социальные сети</h2>
 
