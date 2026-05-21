@@ -213,6 +213,7 @@ body {
   background-image: url("../images/filter-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-color: #6098c7;
 }
 
