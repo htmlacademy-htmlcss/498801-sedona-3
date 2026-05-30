@@ -126,6 +126,9 @@ body {
 }
 
 .navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   width: 500px;
   margin: 0 auto 0 0;
   padding: 0;
@@ -133,25 +136,45 @@ body {
 }
 
 .navigation__controls {
+  display: flex;
   width: 150px;
-  align-self: center;
-  margin: 0;
+  align-self: flex-start;
+  margin: 0 20px 0 0;
   padding: 0;
   list-style: none;
 }
 
+.navigation__control {
+  width: 44px;
+  height: 64px;
+}
+
 .navigation__button {
-  padding-left: 34px;
-  padding-right: 34px;
-  align-self: center;
+  margin-top: 14px;
+  padding-inline: 34px;
+  align-self: flex-start;
 }
 
 .navigation__link {
+  position: relative;
+  display: block;
+  padding: 20px 16px;
   font-weight: 700;
   font-size: 20px;
   line-height: 120%;
   text-decoration: none;
   color: #000000;
+}
+
+.navigation__link_active:before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 100%;
+  margin-top: -1px;
+  width: calc(100% - (16px * 2));
+  height: 2px;
+  background-color: #756257;
 }
 
 .navigation__icon {
@@ -174,7 +197,6 @@ body {
 
 /* hero */
 .hero {
-  height: 485px;
   padding: 51px 0 82px;
   background-color: #6098c7;
   background-image: url("../images/divider.svg"), url("../images/hero-background.jpg");
@@ -370,6 +392,7 @@ body {
 .filter__form {
   display: flex;
   gap: 70px;
+  flex-wrap: wrap;
 }
 
 .filter__fieldset {
