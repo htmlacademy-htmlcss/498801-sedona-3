@@ -621,7 +621,7 @@ img {
 .filter__input-wrap {
   display: flex;
   gap: 2px;
-  margin-bottom: 36px;
+  margin: 0 0 36px;
 }
 
 .filter__button {
