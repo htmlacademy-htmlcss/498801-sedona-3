@@ -171,7 +171,8 @@ img {
   list-style: none;
 }
 
-.navigation__control {
+.navigation__icon {
+  display: block;
   min-width: 44px;
   min-height: 64px;
 }
@@ -207,13 +208,22 @@ img {
   text-decoration: none;
 }
 
+.icon_favourites {
+  position: relative;
+}
+
 .icon_favourites-count {
+  position: absolute;
+  top: 11px;
+  right: 5px;
+  padding: 5px;
   font-weight: 400;
   font-size: 10px;
   line-height: 100%;
   text-align: center;
   color: #ffffff;
   background-color: #7db54f;
+  border-radius: 50%;
 }
 
 .navigation__button {
