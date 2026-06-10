@@ -540,7 +540,6 @@ button.button:disabled {
 
 .hotel-search__button:focus-visible {
   background-color: #615048;
-  outline: none;
 }
 
 .hotel-search__button:active {
@@ -614,7 +613,7 @@ button.button:disabled {
   color: #ffffff;
   background-color: #82b3d3;
   border-radius: 0 4px 4px 0;
-   outline: none;
+  outline: none;
 }
 
 .subscribe__button:hover {
@@ -716,7 +715,7 @@ button.button:disabled {
 }
 
 .developer {
-  flex-basis: 115px;
+  flex-basis: 200px;
   min-height: 33px;
   display: flex;
   align-items: center;
@@ -725,7 +724,7 @@ button.button:disabled {
   background-color: #000000;
   mask-image: url("../images/icons/developer.svg");
   mask-size: 115px 33px;
-  mask-position: center;
+  mask-position: right center;
   mask-repeat: no-repeat;
   outline: none;
   transition: background-color .3s;
