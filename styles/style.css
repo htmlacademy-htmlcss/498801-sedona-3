@@ -266,6 +266,13 @@ button.button:disabled {
   outline: none;
 }
 
+@supports not selector(:focus-visible) {
+  .navigation__button:focus {
+    background-color: #615048;
+    outline: none;
+  }
+}
+
 .navigation__button:active {
   background-color: #756157;
   color: rgba(255, 255, 255, .3);
@@ -280,7 +287,7 @@ button.button:disabled {
   line-height: 120%;
   text-decoration: none;
   color: #000000;
-  transition: color .2s;
+  transition: color .2s, opacity .3s;
   outline: none;
 }
 
@@ -305,9 +312,26 @@ button.button:disabled {
   right: 16px;
 }
 
+.navigation__link:focus-visible {
+  opacity: .6;
+}
+
+@supports not selector(:focus-visible) {
+  .navigation__link:focus {
+    opacity: .6;
+  }
+}
+
 .navigation__link:focus-visible:before {
   left: 16px;
   right: 16px;
+}
+
+@supports not selector(:focus-visible) {
+  .navigation__link:focus:before {
+    left: 16px;
+    right: 16px;
+  }
 }
 
 .navigation__link:active:not(.navigation__link_active) {
@@ -542,6 +566,12 @@ button.button:disabled {
   background-color: #615048;
 }
 
+@supports not selector(:focus-visible) {
+  .hotel-search__button:focus {
+    background-color: #615048;
+  }
+}
+
 .hotel-search__button:active {
   background-color: #756157;
   color: rgba(255, 255, 255, .3);
@@ -624,6 +654,12 @@ button.button:disabled {
   background-color: #68A2CA;
 }
 
+@supports not selector(:focus-visible) {
+  .subscribe__button:focus {
+    background-color: #68A2CA;
+  }
+}
+
 .subscribe__button:active {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, .3)
@@ -668,6 +704,12 @@ button.button:disabled {
   background-color: #68A2CA;
 }
 
+@supports not selector(:focus-visible) {
+  .socials__link:focus {
+    background-color: #68A2CA;
+  }
+}
+
 .socials__link:active {
   background-color: rgba(104, 162, 202, .3);
 }
@@ -708,6 +750,12 @@ button.button:disabled {
 
 .contacts__phone:focus-visible {
   color: #756157;
+}
+
+@supports not selector(:focus-visible) {
+  .contacts__phone:focus {
+    color: #756157;
+  }
 }
 
 .contacts__phone:active {
@@ -818,6 +866,12 @@ button.button:disabled {
   background-color: rgba(255, 255, 255, .3);
 }
 
+@supports not selector(:focus-visible) {
+  .breadcrumbs__link_home:focus {
+    background-color: rgba(255, 255, 255, .3);
+  }
+}
+
 .breadcrumbs__link_home:active {
   background-color: rgba(255, 255, 255, .7);
 }
@@ -828,6 +882,12 @@ button.button:disabled {
 
 .breadcrumbs__link:not(.breadcrumbs__link_active):focus-visible {
   color: rgba(255, 255, 255, .3);
+}
+
+@supports not selector(:focus-visible) {
+  .breadcrumbs__link:not(.breadcrumbs__link_active):focus {
+    color: rgba(255, 255, 255, .3);
+  }
 }
 
 .breadcrumbs__link:not(.breadcrumbs__link_active):active {
@@ -905,6 +965,12 @@ button.button:disabled {
 
 .filter__fieldset-item input:focus-visible {
   outline-color: #83B3D3;
+}
+
+@supports not selector(:focus-visible) {
+  .filter__fieldset-item input:focus {
+    outline-color: #83B3D3;
+  }
 }
 
 .filter__fieldset-label:active {
@@ -1037,6 +1103,12 @@ button.button:disabled {
   background-color: #68A2CA;
 }
 
+@supports not selector(:focus-visible) {
+  .filter__button:focus {
+    background-color: #68A2CA;
+  }
+}
+
 .filter__button:active {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, .3)
@@ -1058,6 +1130,13 @@ button.button:disabled {
 .filter__button_reset:focus-visible {
   background-color: transparent;
   outline: 3px solid #83B3D3;
+}
+
+@supports not selector(:focus-visible) {
+  .filter__button_reset:focus {
+    background-color: transparent;
+    outline: 3px solid #83B3D3;
+  }
 }
 
 .filter__button_reset:active {
@@ -1108,6 +1187,12 @@ button.button:disabled {
 
 .result__select:focus-visible {
   border-color: #68a2ca;
+}
+
+@supports not selector(:focus-visible) {
+  .result__select:focus {
+    border-color: #68a2ca;
+  }
 }
 
 .result__select:active {
@@ -1215,6 +1300,12 @@ button.button:disabled {
   opacity: .8;
 }
 
+@supports not selector(:focus-visible) {
+  .card__link:focus {
+    opacity: .8;
+  }
+}
+
 .card__link:active {
   opacity: .7;
 }
@@ -1265,6 +1356,12 @@ button.button:disabled {
   background-color: #615048;
 }
 
+@supports not selector(:focus-visible) {
+  .card__more:focus {
+    background-color: #615048;
+  }
+}
+
 .card__more:active {
   background-color: #756157;
   color: rgba(255, 255, 255, .3);
@@ -1283,6 +1380,12 @@ button.button:disabled {
   background-color: #68A2CA;
 }
 
+@supports not selector(:focus-visible) {
+  .button_favorites:focus {
+    background-color: #68A2CA;
+  }
+}
+
 .button_favorites:active {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, .3)
@@ -1299,6 +1402,12 @@ button.button:disabled {
 
 .button_in-favorites:focus-visible {
   background-color: #6C9E42;
+}
+
+@supports not selector(:focus-visible) {
+  .button_in-favorites:focus {
+    background-color: #6C9E42;
+  }
 }
 
 .button_in-favorites:active {
@@ -1399,6 +1508,12 @@ button.button:disabled {
 
 .result__pagination-link:focus-visible {
   background-color: #68A2CA;
+}
+
+@supports not selector(:focus-visible) {
+ .result__pagination-link:focus {
+    background-color: #68A2CA;
+  }
 }
 
 .result__pagination-link:active:not(.result__pagination-link_current):not(.result__pagination-link_dotted) {
