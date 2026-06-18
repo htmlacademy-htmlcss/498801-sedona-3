@@ -159,5 +159,83 @@
         </a>
       </footer>
     </div>
+
+    <div class="modal-wrapper modal-open">
+      <div class="modal">
+        <button class="modal__close" type="button">
+          <span class="visually-hidden">Закрыть модальное окно</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z" />
+          </svg>
+        </button>
+        <section class="modal__inner">
+          <h2 class="title modal__title">Поиск гостиницы в Седоне</h2>
+          <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="modal__row">
+              <span class="modal__input-text">Дата заезда:</span>
+              <div class="modal__input-wrap">
+                <div class="modal__input-base">
+                  <input type="text" value="27 апреля 2020" name="start" placeholder="Укажите дату" class="modal__input">
+                  <button class="modal__date-btn" type="button">
+                    <span class="visually-hidden">Выбрать дату заезда</span>
+                  </button>
+                </div>
+                <span class="modal__input-info modal__input-info_warning">Мы не можем отправить вас в прошлое.</span>
+              </div>
+            </label>
+            <label class="modal__row">
+              <span class="modal__input-text">Дата выезда:</span>
+              <div class="modal__input-wrap">
+                <div class="modal__input-base">
+                  <input type="text" value="1 сентября 2023" name="end" placeholder="Укажите дату" class="modal__input">
+                  <button class="modal__date-btn" type="button">
+                    <span class="visually-hidden">Выбрать дату выезда</span>
+                  </button>
+                </div>
+                <span class="modal__input-info">На эти даты есть свободные номера. Пока есть.</span>
+              </div>
+            </label>
+            <label  class="modal__row modal__row_adult">
+              <span class="modal__input-text">Взрослые:</span>
+              <div class="modal__num-base">
+                <input type="number" value="2" name="adult" class="modal__input modal__input_num">
+                <button class="modal__num-btn modal__num-btn_decrease" type="button">
+                  <span class="visually-hidden">Уменьшить количество детей</span>
+                </button>
+                <button class="modal__num-btn modal__num-btn_increase" type="button">
+                  <span class="visually-hidden">Увеличить количество детей</span>
+                </button>
+              </div>
+            </label>
+            <label  class="modal__row modal__row_child">
+              <div class="modal__input-text modal__input-text_child">
+                <span>Дети:</span>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                    <svg width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white" />
+                    </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
+                    Укажите количество детей, которые будут c вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </span>
+              </div>
+              <div class="modal__num-base">
+                <input type="number" value="2" name="child" class="modal__input modal__input_num">
+                <button class="modal__num-btn modal__num-btn_decrease" type="button">
+                  <span class="visually-hidden">Уменьшить количество детей</span>
+                </button>
+                <button class="modal__num-btn modal__num-btn_increase" type="button">
+                  <span class="visually-hidden">Увеличить количество детей</span>
+                </button>
+              </div>
+            </label>
+            <button class="modal__button button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
   </body>
 </html>
