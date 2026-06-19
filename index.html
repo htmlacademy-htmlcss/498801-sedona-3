@@ -160,7 +160,7 @@
       </footer>
     </div>
 
-    <div class="modal-wrapper modal-open">
+    <div class="modal-wrapper modal-close">
       <div class="modal">
         <button class="modal__close" type="button">
           <span class="visually-hidden">Закрыть модальное окно</span>
@@ -207,10 +207,10 @@
                 </button>
               </div>
             </label>
-            <label  class="modal__row modal__row_child">
+            <div class="modal__row modal__row_child">
               <div class="modal__input-text modal__input-text_child">
-                <span>Дети:</span>
-                <span class="tooltip">
+                <label for="">Дети:</label>
+                <div class="tooltip">
                   <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
                     <svg width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white" />
@@ -219,10 +219,10 @@
                   <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
                     Укажите количество детей, которые будут c вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
                   </span>
-                </span>
+                </div>
               </div>
               <div class="modal__num-base">
-                <input type="number" value="2" name="child" class="modal__input modal__input_num">
+                <input type="number" value="2" name="child" id="inputChild" class="modal__input modal__input_num">
                 <button class="modal__num-btn modal__num-btn_decrease" type="button">
                   <span class="visually-hidden">Уменьшить количество детей</span>
                 </button>
@@ -230,12 +230,13 @@
                   <span class="visually-hidden">Увеличить количество детей</span>
                 </button>
               </div>
-            </label>
+            </div>
             <button class="modal__button button" type="submit">Найти</button>
           </form>
         </section>
       </div>
     </div>
 
+    <script src="scripts/main.js"></script>
   </body>
 </html>
