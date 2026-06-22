@@ -1605,13 +1605,15 @@ button.button:disabled {
 .modal__form {
   display: grid;
   grid-template-columns: 1fr 242px;
-  gap: 23px;
+  row-gap: 23px;
+  column-gap: 88px;
 }
 
 .modal__row {
   display: flex;
   row-gap: 10px;
   grid-column: 1/-1;
+  align-items: flex-start;
 }
 
 .modal__input-wrap {
@@ -1626,12 +1628,13 @@ button.button:disabled {
 
 .modal__row_adult {
   grid-column: 1/2;
-  align-self: start;
+  justify-content: space-between;
 }
 
 .modal__row_child {
   grid-column: 2/3;
   justify-content: space-between;
+  column-gap: 10px;
 }
 
 .modal__input-text {
@@ -1708,11 +1711,15 @@ button.button:disabled {
   cursor: pointer;
   outline: 3px solid transparent;
   border-radius: 4px;
-  transition: opacity .3s outline .3s;
+  transition: opacity .3s, outline .3s;
 }
 
 .modal__input-text_child {
-  width: auto;
+  width: initial;
+}
+
+.modal__input-text_child label {
+  max-width: 85px;
 }
 
 .modal__num-btn_decrease {
@@ -1886,6 +1893,7 @@ button.button:disabled {
 .modal__input-text_child {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .tooltip {
@@ -1894,7 +1902,7 @@ button.button:disabled {
 
 .tooltip-text {
   position:absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 15px);
   left: -10000px;
   transform: translateX(-50%);
   width: 256px;
@@ -1908,6 +1916,7 @@ button.button:disabled {
   border-radius: 10px;
   text-transform: none;
   opacity: 0;
+  z-index: 2;
   transition: opacity .3s;
 }
 
@@ -1942,4 +1951,7 @@ button.button:disabled {
   width: 19px;
   height: 9px;
   background-image: url("../images/icons/triangle.svg");
+  background-repeat: no-repeat;
+  background-size: 19px 9px;
+  background-position: center;
 }

@@ -171,30 +171,30 @@
         <section class="modal__inner">
           <h2 class="title modal__title">Поиск гостиницы в Седоне</h2>
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="modal__row">
-              <span class="modal__input-text">Дата заезда:</span>
+            <div class="modal__row">
+              <label class="modal__input-text" for="check-in-date">Дата заезда:</label>
               <div class="modal__input-wrap">
                 <div class="modal__input-base">
-                  <input type="text" value="27 апреля 2020" name="start" placeholder="Укажите дату" class="modal__input">
+                  <input type="text" value="27 апреля 2020" name="start" id="check-in-date" placeholder="Укажите дату" class="modal__input">
                   <button class="modal__date-btn" type="button">
                     <span class="visually-hidden">Выбрать дату заезда</span>
                   </button>
                 </div>
                 <span class="modal__input-info modal__input-info_warning">Мы не можем отправить вас в прошлое.</span>
               </div>
-            </label>
-            <label class="modal__row">
-              <span class="modal__input-text">Дата выезда:</span>
+            </div>
+            <div class="modal__row">
+              <label class="modal__input-text" for="check-out-date">Дата выезда:</label>
               <div class="modal__input-wrap">
                 <div class="modal__input-base">
-                  <input type="text" value="1 сентября 2023" name="end" placeholder="Укажите дату" class="modal__input">
+                  <input type="text" value="1 сентября 2023" name="end" id="check-out-date" placeholder="Укажите дату" class="modal__input">
                   <button class="modal__date-btn" type="button">
                     <span class="visually-hidden">Выбрать дату выезда</span>
                   </button>
                 </div>
                 <span class="modal__input-info">На эти даты есть свободные номера. Пока есть.</span>
               </div>
-            </label>
+            </div>
             <label  class="modal__row modal__row_adult">
               <span class="modal__input-text">Взрослые:</span>
               <div class="modal__num-base">
@@ -209,7 +209,7 @@
             </label>
             <div class="modal__row modal__row_child">
               <div class="modal__input-text modal__input-text_child">
-                <label for="">Дети:</label>
+                <label for="inputChild">Дети:</label>
                 <div class="tooltip">
                   <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
                     <svg width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
