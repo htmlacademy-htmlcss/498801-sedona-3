@@ -1225,6 +1225,7 @@ button.button:disabled {
 
 .filter__view-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   width: 160px;
   margin: 0;
