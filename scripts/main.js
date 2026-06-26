@@ -24,7 +24,7 @@ modal.addEventListener('click', function(event) {
 let modalNumBase = document.querySelectorAll('.modal__num-base');
 modalNumBase.forEach(function(item) {
 
-  let modalInputDecrease = item.querySelector('.modal__num-btn_decrease');
+  let modalInputDecrease = item.querySelector('.modal__btn-decrease');
   modalInputDecrease.addEventListener('click', function() {
     let input = item.querySelector('.modal__input_num');
     if (input.value > 0) {
@@ -32,7 +32,7 @@ modalNumBase.forEach(function(item) {
     }
   });
 
-  let modalInputIncrease = item.querySelector('.modal__num-btn_increase');
+  let modalInputIncrease = item.querySelector('.modal__btn-increase');
   modalInputIncrease.addEventListener('click', function() {
     let input = item.querySelector('.modal__input_num');
     input.value = parseInt(input.value) + 1;
