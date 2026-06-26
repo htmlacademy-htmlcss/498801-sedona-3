@@ -12,17 +12,17 @@
   <body>
     <div class="page-container">
       <header class="page-header">
-        <a href="index.html" class="logo">
-          <img src="images/logo.svg" width="140" height="70" alt="Логотип Sedona." class="logo__img">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="images/logo.svg" width="140" height="70" alt="Логотип Седоны.">
         </a>
 
         <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="index.html" class="navigation__link">Главная</a>
+              <a class="navigation__link" href="index.html">Главная</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">О Седоне</a>
+              <a class="navigation__link" href="#">О Седоне</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link navigation__link_active" aria-current="page">Гостиницы</a>
@@ -31,19 +31,19 @@
 
           <ul class="navigation__controls">
             <li class="navigation__control">
-              <a href="#" class="navigation__icon icon icon_search">
+              <a class="navigation__icon icon icon_search" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation__control">
-              <a href="#" class="navigation__icon icon icon_favourites">
+              <a class="navigation__icon icon icon_favourites" href="#">
                 <span class="visually-hidden">Отелей в избранном</span>
                 <span class="icon_favourites-count">99</span>
               </a>
             </li>
           </ul>
 
-          <a href="#" class="navigation__button button">Хочу сюда!</a>
+          <a class="navigation__button button" href="#">Хочу сюда!</a>
         </nav>
       </header>
 
@@ -53,14 +53,12 @@
 
           <ul class="breadcrumbs">
             <li class="breadcrumbs__item">
-              <a href="index.html" class="breadcrumbs__link breadcrumbs__link_home">
+              <a class="breadcrumbs__link breadcrumbs__link_home" href="index.html">
                 <span class="visually-hidden">На главную</span>
               </a>
             </li>
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link breadcrumbs__link_active">
-                Гостиницы
-              </a>
+              <a class="breadcrumbs__link breadcrumbs__link_active">Гостиницы</a>
             </li>
           </ul>
 
@@ -72,19 +70,19 @@
               <ul class="filter__fieldset-list">
                 <li class="filter__fieldset-item">
                   <label class="filter__fieldset-label">
-                    <input type="checkbox" class="checkbox" name="pool" checked>
+                    <input class="checkbox" type="checkbox" name="pool" checked>
                     <span class="filter__fieldset-text">Бассейн</span>
                   </label>
                 </li>
                 <li class="filter__fieldset-item">
                   <label class="filter__fieldset-label">
-                    <input type="checkbox" class="checkbox" name="parking" checked>
+                    <input class="checkbox" type="checkbox" name="parking" checked>
                     <span class="filter__fieldset-text">Парковка</span>
                   </label>
                 </li>
                 <li class="filter__fieldset-item">
                   <label class="filter__fieldset-label">
-                    <input type="checkbox" class="checkbox" name="wifi">
+                    <input class="checkbox" type="checkbox" name="wifi">
                     <span class="filter__fieldset-text">Wi-Fi</span>
                   </label>
                 </li>
@@ -92,23 +90,23 @@
             </fieldset>
 
             <fieldset class="filter__fieldset filter__fieldset_type">
-              <legend class="filter__subtitle">Тип жилья:</legend>
+              <legend class="filter__subtitle">Тип Жилья:</legend>
               <ul class="filter__fieldset-list">
                 <li class="filter__fieldset-item">
                   <label class="filter__fieldset-label">
-                    <input type="radio" class="radio" name="property-type" value="hotel" checked>
+                    <input class="radio" type="radio" name="property-type" value="hotel" checked>
                     <span class="filter__fieldset-text">Гостиница</span>
                   </label>
                 </li>
                 <li class="filter__fieldset-item">
                   <label class="filter__fieldset-label">
-                    <input type="radio" class="radio" name="property-type" value="motel">
+                    <input class="radio" type="radio" name="property-type" value="motel">
                     <span class="filter__fieldset-text">Мотель</span>
                   </label>
                 </li>
                 <li class="filter__fieldset-item">
                   <label class="filter__fieldset-label">
-                    <input type="radio" class="radio" name="property-type" value="apartments">
+                    <input class="radio" type="radio" name="property-type" value="apartments">
                     <span class="filter__fieldset-text">Апартаменты</span>
                   </label>
                 </li>
@@ -119,37 +117,41 @@
               <legend class="filter__subtitle">Стоимость, ₽:</legend>
               <p class="filter__input-wrap">
                 <label>
-                  <input type="number" name="cost-from" value="0" class="filter__input filter__input_from">
+                  <input class="filter__input filter__input_from" type="number" name="cost-from" value="0">
                   <span class="filter__input-text">От</span>
                 </label>
                 <label>
-                  <input type="number" name="cost-to" value="9000" class="filter__input filter__input_to">
+                  <input class="filter__input filter__input_to" type="number" name="cost-to" value="9000">
                   <span class="filter__input-text">До</span>
                 </label>
               </p>
 
               <div class="filter__range">
-                <div class="filter__range_active-line">
-                  <button type="button" class="filter__range__from"></button>
-                  <button type="button" class="filter__range__to"></button>
+                <div class="filter__range-active">
+                  <button class="filter__range-from" type="button">
+                    <span class="visually-hidden">Двигать ползунок начальной цены</span>
+                  </button>
+                  <button class="filter__range-to" type="button">
+                    <span class="visually-hidden">Двигать ползунок конечной цены</span>
+                  </button>
                 </div>
               </div>
             </fieldset>
 
             <fieldset class="filter__fieldset filter__fieldset_buttons">
-              <button type="submit" class="filter__button button">Применить</button>
-              <button type="reset" class="filter__button filter__button_reset button">Сбросить</button>
+              <button class="filter__button button" type="submit">Применить</button>
+              <button class="filter__button filter__button_reset button" type="reset">Сбросить</button>
             </fieldset>
           </form>
         </section>
 
         <section class="result">
           <header class="result__header">
-            <h2 class="result__title title">
-              Найдено гостиниц: <span class="result__num">38</span>
+            <h2 class="result__title title">Найдено гостиниц:
+              <span class="result__num">38</span>
             </h2>
 
-            <select name="sort" class="result__select" aria-label="Сортировать">
+            <select class="result__select" name="sort" aria-label="Сортировать">
               <option value="cheap" selected>Сначала дешевые</option>
               <option value="expensive">Сначала дорогие</option>
               <option value="popular">Сначала популярные</option>
@@ -157,17 +159,17 @@
 
             <ul class="filter__view-list" aria-label="Выбрать вид отображения">
               <li class="filter__view-item">
-                <a href="catalog.html?view=tile" class="filter__view-link filter__view-link_active filter__view-link_grid">
+                <a class="filter__view-link filter__view-active filter__view-grid" href="catalog.html?view=tile">
                   <span class="visually-hidden">Плиткой</span>
                 </a>
               </li>
               <li class="filter__view-item">
-                <a href="catalog.html?view=card" class="filter__view-link filter__view-link_full">
+                <a class="filter__view-link filter__view-full" href="catalog.html?view=card">
                   <span class="visually-hidden">На весь экран</span>
                 </a>
               </li>
               <li class="filter__view-item">
-                <a href="catalog.html?view=list" class="filter__view-link filter__view-link_list">
+                <a class="filter__view-link filter__view-listing" href="catalog.html?view=list">
                   <span class="visually-hidden">Списком</span>
                 </a>
               </li>
@@ -176,17 +178,17 @@
 
           <ul class="result__list">
             <li class="result__item card">
-              <a href="#" class="card__link">
-                <img src="images/hotels/amara-resort-spa.jpg" width="300" height="212" alt="Вид с гостиницы Amara Resort & Spa." class="card__img">
+              <a class="card__link" href="#">
+                <img class="card__img" src="images/hotels/amara-resort-spa.jpg" width="300" height="212" alt="Вид с гостиницы Amara Resort & Spa.">
               </a>
-              <a href="#" class="card__title-link">
+              <a class="card__title-link" href="#">
                 <h3 class="card__title">Amara Resort & Spa</h3>
               </a>
               <p class="card__info">
                 <span class="card__type">Гостиница</span>
                 <b class="card__price">От 4000 ₽</b>
               </p>
-              <a href="#" class="button card__more">Подробнее</a>
+              <a class="button card__more" href="#">Подробнее</a>
               <button class="button button_favorites card__button" type="button">В избранное</button>
               <p class="card__status star-4">
                 <span class="visually-hidden">Четыре звезды</span>
@@ -195,17 +197,17 @@
             </li>
 
             <li class="result__item card">
-              <a href="#" class="card__link">
-                <img src="images/hotels/villas-at-poco-diablo.jpg" width="300" height="212" alt="Вид с гостиницы Villas at Poco Diablo." class="card__img">
+              <a class="card__link" href="#">
+                <img class="card__img" src="images/hotels/villas-at-poco-diablo.jpg" width="300" height="212" alt="Вид с гостиницы Villas at Poco Diablo.">
               </a>
-              <a href="#" class="card__title-link">
+              <a class="card__title-link" href="#">
                 <h3 class="card__title">Villas at Poco Diablo</h3>
               </a>
               <p class="card__info">
                 <span class="card__type">Гостиница</span>
                 <b class="card__price">От 5000 ₽</b>
               </p>
-              <a href="#" class="button card__more">Подробнее</a>
+              <a class="button card__more" href="#">Подробнее</a>
               <button class="button button_in-favorites card__button" type="button">В избранном</button>
               <p class="card__status star-4">
                 <span class="visually-hidden">Четыре звезды</span>
@@ -214,17 +216,17 @@
             </li>
 
             <li class="result__item card">
-              <a href="#" class="card__link">
-                <img src="images/hotels/desert-quail-inn.jpg" width="300" height="212" alt="Вид с гостиницы Desert Quail Inn." class="card__img">
+              <a class="card__link" href="#">
+                <img class="card__img" src="images/hotels/desert-quail-inn.jpg" width="300" height="212" alt="Вид с гостиницы Desert Quail Inn.">
               </a>
-              <a href="#" class="card__title-link">
+              <a class="card__title-link" href="#">
                 <h3 class="card__title">Desert Quail Inn</h3>
               </a>
               <p class="card__info">
                 <span class="card__type">Гостиница</span>
                 <b class="card__price">От 2500 ₽</b>
               </p>
-              <a href="#" class="button card__more">Подробнее</a>
+              <a class="button card__more" href="#">Подробнее</a>
               <button class="button button_favorites card__button" type="button">В избранное</button>
               <p class="card__status star-3">
                 <span class="visually-hidden">Три звезды</span>
@@ -233,17 +235,17 @@
             </li>
 
             <li class="result__item card">
-              <a href="#" class="card__link">
-                <img src="images/hotels/greentree-inn.jpg" width="300" height="212" alt="Вид из гостиницы GreenTree Inn." class="card__img">
+              <a class="card__link" href="#">
+                <img class="card__img" src="images/hotels/greentree-inn.jpg" width="300" height="212" alt="Вид из гостиницы GreenTree Inn.">
               </a>
-              <a href="#" class="card__title-link">
+              <a class="card__title-link" href="#">
                 <h3 class="card__title">GreenTree Inn</h3>
               </a>
               <p class="card__info">
                 <span class="card__type">Гостиница</span>
                 <b class="card__price">От 1500 ₽</b>
               </p>
-              <a href="#" class="button card__more">Подробнее</a>
+              <a class="button card__more" href="#">Подробнее</a>
               <button class="button button_favorites card__button" type="button">В избранное</button>
               <p class="card__status star-2">
                 <span class="visually-hidden">Две звезды</span>
@@ -254,22 +256,22 @@
 
           <ul class="result__pagination">
             <li class="result__pagination-item">
-              <a class="result__pagination-link result__pagination-link_current" aria-current="page">1</a>
+              <a class="result__pagination-link result__pagination-current" aria-current="page">1</a>
             </li>
             <li class="result__pagination-item">
-              <a href="" class="result__pagination-link">2</a>
+              <a class="result__pagination-link" href="#">2</a>
             </li>
             <li class="result__pagination-item">
-              <a href="" class="result__pagination-link">3</a>
+              <a class="result__pagination-link" href="#">3</a>
             </li>
             <li class="result__pagination-item">
-              <a href="" class="result__pagination-link">4</a>
-            </li>
-            <li class="result__pagination-item ">
-              <span class="result__pagination-link result__pagination-link_dotted">...</span>
+              <a class="result__pagination-link" href="#">4</a>
             </li>
             <li class="result__pagination-item">
-              <a href="" class="result__pagination-link">10</a>
+              <span class="result__pagination-link result__pagination-dotted">...</span>
+            </li>
+            <li class="result__pagination-item">
+              <a class="result__pagination-link" href="#">10</a>
             </li>
           </ul>
         </section>
@@ -291,17 +293,17 @@
       <footer class="page-footer">
         <ul class="socials">
           <li class="socials__item">
-            <a href="#" class="socials__link socials__link_vk">
+            <a class="socials__link socials__link_vk" href="#">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link  socials__link_tg">
+            <a class="socials__link socials__link_tg" href="#">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link  socials__link_youtube">
+            <a class="socials__link socials__link_youtube" href="#">
               <span class="visually-hidden">Ютуб</span>
             </a>
           </li>
@@ -311,7 +313,7 @@
           <a class="contacts__phone" href="tel:88128121212">+7 (812) 812-12-12</a>
         </address>
 
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="developer">
+        <a class="developer" href="https://htmlacademy.ru/intensive/htmlcss">
           <span class="visually-hidden">htmlacademy</span>
         </a>
       </footer>

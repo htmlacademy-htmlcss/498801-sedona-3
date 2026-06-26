@@ -12,45 +12,45 @@
   <body>
     <div class="page-container">
       <header class="page-header">
-        <a href="index.html" class="logo" aria-current="page">
-          <img src="images/logo.svg" width="140" height="70" alt="Логотип Седоны." class="logo__img">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="images/logo.svg" width="140" height="70" alt="Логотип Седоны.">
         </a>
 
         <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a class="navigation__link navigation__link_active" aria-current="page">Главная</a>
+              <a class="navigation__link navigation__link_active" href="#" aria-current="page">Главная</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">О Седоне</a>
+              <a class="navigation__link" href="#">О Седоне</a>
             </li>
             <li class="navigation__item">
-              <a href="catalog.html" class="navigation__link">Гостиницы</a>
+              <a class="navigation__link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
 
           <ul class="navigation__controls">
             <li class="navigation__control">
-              <a href="#" class="navigation__icon icon icon_search">
+              <a class="navigation__icon icon icon_search" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation__control">
-              <a href="#" class="navigation__icon icon icon_favourites">
+              <a class="navigation__icon icon icon_favourites" href="#">
                 <span class="visually-hidden">Отелей в избранном</span>
                 <span class="icon_favourites-count">99</span>
               </a>
             </li>
           </ul>
 
-          <a href="#" class="navigation__button button">Хочу сюда!</a>
+          <a class="navigation__button button" href="#">Хочу сюда!</a>
         </nav>
       </header>
 
       <main class="page-main">
         <section class="hero">
           <h1 class="visually-hidden">Сайт города Седона</h1>
-          <img src="images/hero-welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona. 'Because the Grand Canyon sucks!'" class="hero__img">
+          <img class="hero__img" src="images/hero-welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona. 'Because the Grand Canyon sucks!'">
         </section>
 
         <section class="advantages" data-test="advantages">
@@ -65,7 +65,7 @@
                 <h3 class="advantages__subtitle subtitle">Настоящий городок</h3>
                 <p class="advantages__subdesc subdesc">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <img src="images/advantages-street.jpg" width="800" height="385" alt="Улица города Седона." class="advantages__img">
+              <img class="advantages__img" src="images/advantages-street.jpg" width="800" height="385" alt="Улица города Седона.">
             </li>
             <li class="advantages__item">
               <h3 class="advantages__subtitle subtitle">Небольшая площадь</h3>
@@ -81,10 +81,10 @@
             </li>
             <li class="advantages__item advantages__item_img advantages__item_invert">
               <div class="advantages__wrap">
-                <h3 class="advantages__subtitle subtitle">Там есть мост дьявола</h3>
+                <h3 class="advantages__subtitle subtitle">Там есть <br> мост дьявола</h3>
                 <p class="advantages__subdesc subdesc">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
-              <img src="images/advantages-devil-bridge.jpg" width="800" height="385" alt="Мост Дьявола с видом на каньоны и долины." class="advantages__img">
+              <img class="advantages__img" src="images/advantages-devil-bridge.jpg" width="800" height="385" alt="Мост Дьявола с видом на каньоны и долины.">
             </li>
           </ul>
         </section>
@@ -134,17 +134,17 @@
       <footer class="page-footer">
         <ul class="socials">
           <li class="socials__item">
-            <a href="#" class="socials__link socials__link_vk">
+            <a class="socials__link socials__link_vk" href="#">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link  socials__link_tg">
+            <a class="socials__link socials__link_tg" href="#">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link  socials__link_youtube">
+            <a class="socials__link socials__link_youtube" href="#">
               <span class="visually-hidden">Ютуб</span>
             </a>
           </li>
@@ -154,7 +154,7 @@
           <a class="contacts__phone" href="tel:88128121212">+7 (812) 812-12-12</a>
         </address>
 
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="developer">
+        <a class="developer" href="https://htmlacademy.ru/intensive/htmlcss">
           <span class="visually-hidden">htmlacademy</span>
         </a>
       </footer>
@@ -175,19 +175,19 @@
               <label class="modal__input-text" for="check-in-date">Дата заезда:</label>
               <div class="modal__input-wrap">
                 <div class="modal__input-base">
-                  <input type="text" value="27 апреля 2020" name="start" id="check-in-date" placeholder="Укажите дату" class="modal__input">
+                  <input class="modal__input" id="check-in-date" type="text" name="start" value="27 апреля 2020" placeholder="Укажите дату">
                   <button class="modal__date-btn" type="button">
                     <span class="visually-hidden">Выбрать дату заезда</span>
                   </button>
                 </div>
-                <span class="modal__input-info modal__input-info_warning">Мы не можем отправить вас в прошлое.</span>
+                <span class="modal__input-info modal__warning">Мы не можем отправить вас в прошлое.</span>
               </div>
             </div>
             <div class="modal__row">
               <label class="modal__input-text" for="check-out-date">Дата выезда:</label>
               <div class="modal__input-wrap">
                 <div class="modal__input-base">
-                  <input type="text" value="1 сентября 2023" name="end" id="check-out-date" placeholder="Укажите дату" class="modal__input">
+                  <input class="modal__input" id="check-out-date" type="text" name="end" value="1 сентября 2023" placeholder="Укажите дату">
                   <button class="modal__date-btn" type="button">
                     <span class="visually-hidden">Выбрать дату выезда</span>
                   </button>
@@ -195,38 +195,37 @@
                 <span class="modal__input-info">На эти даты есть свободные номера. Пока есть.</span>
               </div>
             </div>
-            <label  class="modal__row modal__row_adult">
-              <span class="modal__input-text">Взрослые:</span>
+            <div class="modal__row modal__row_adult">
+              <label class="modal__input-text" for="input-adult">Взрослые:</label>
               <div class="modal__num-base">
-                <input type="number" value="2" name="adult" class="modal__input modal__input_num">
-                <button class="modal__num-btn modal__num-btn_decrease" type="button">
+                <input class="modal__input modal__input_num" id="input-adult" type="number" name="adult" value="2">
+                <button class="modal__num-btn modal__btn-decrease" type="button">
                   <span class="visually-hidden">Уменьшить количество детей</span>
                 </button>
-                <button class="modal__num-btn modal__num-btn_increase" type="button">
+                <button class="modal__num-btn modal__btn-increase" type="button">
                   <span class="visually-hidden">Увеличить количество детей</span>
                 </button>
               </div>
-            </label>
+            </div>
             <div class="modal__row modal__row_child">
-              <div class="modal__input-text modal__input-text_child">
-                <label for="inputChild">Дети:</label>
+              <div class="modal__input-text modal__child-block">
+                <label for="input-child">Дети:</label>
                 <div class="tooltip">
                   <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
                     <svg width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white" />
                     </svg>
+                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                   </button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
-                    Укажите количество детей, которые будут c вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
-                  </span>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут c вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                 </div>
               </div>
               <div class="modal__num-base">
-                <input type="number" value="2" name="child" id="inputChild" class="modal__input modal__input_num">
-                <button class="modal__num-btn modal__num-btn_decrease" type="button">
+                <input class="modal__input modal__input_num" id="input-child" type="number" name="child" value="2">
+                <button class="modal__num-btn modal__btn-decrease" type="button">
                   <span class="visually-hidden">Уменьшить количество детей</span>
                 </button>
-                <button class="modal__num-btn modal__num-btn_increase" type="button">
+                <button class="modal__num-btn modal__btn-increase" type="button">
                   <span class="visually-hidden">Увеличить количество детей</span>
                 </button>
               </div>
