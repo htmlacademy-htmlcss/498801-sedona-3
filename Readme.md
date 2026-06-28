@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Владислав Пивоваров](https://up.htmlacademy.ru/htmlcss-individual/3/user/498801).
-* Наставник: `Неизвестно`.
+* Наставник: [Дина Шарипова](https://htmlacademy.ru/profile/id1418957).
+* Сайт: [Sedona](https://webrvlad.github.io/498801-sedona-3/).
 
 ---
 
